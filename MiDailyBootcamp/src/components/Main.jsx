@@ -1,12 +1,10 @@
-function TeamItem({ name , image}) {
+import Feed from "./feed";
+
+function TeamItem({ name, image }) {
   return (
     <div class="date-teams1">
       <a class="link-team" href="#">
-        <img
-          class="team-img"
-          src={image}
-          alt="Alden Cantrell"
-        />
+        <img class="team-img" src={image} alt="Alden Cantrell" />
         <p class="text-teams">{name}</p>
       </a>
     </div>
@@ -46,10 +44,22 @@ function Main() {
           <div class="teams">
             <h2>My team</h2>
             <div class="container-team">
-              <TeamItem name={"Alden Cantrell"} image={"https://my-daily-bootcamp-rojo.netlify.app/img/1.jpg"} />
-              <TeamItem name="Thomas Crane" image ="https://my-daily-bootcamp-rojo.netlify.app/img/3.jpg"/>
-              <TeamItem name="Miranda Shaffer" image = "https://my-daily-bootcamp-rojo.netlify.app/img/4.jpg" />
-              <TeamItem name="Alvaro Mcgee" image = "https://my-daily-bootcamp-rojo.netlify.app/img/5.jpg"/>
+              <TeamItem
+                name={"Alden Cantrell"}
+                image={"https://my-daily-bootcamp-rojo.netlify.app/img/1.jpg"}
+              />
+              <TeamItem
+                name="Thomas Crane"
+                image="https://my-daily-bootcamp-rojo.netlify.app/img/3.jpg"
+              />
+              <TeamItem
+                name="Miranda Shaffer"
+                image="https://my-daily-bootcamp-rojo.netlify.app/img/4.jpg"
+              />
+              <TeamItem
+                name="Alvaro Mcgee"
+                image="https://my-daily-bootcamp-rojo.netlify.app/img/5.jpg"
+              />
             </div>
           </div>
         </div>
@@ -90,7 +100,7 @@ function Main() {
               </form>
             </a>
           </div>
-          <div id="feed"></div>
+          <Feed />
         </div>
 
         <div class="sidebar-right">
@@ -155,17 +165,17 @@ function Main() {
                 <div class="notice-avatars">
                   <img
                     class="avatar avatar1"
-                    src="./assets/companies/profile-1.jpg"
+                    src="https://my-daily-bootcamp-rojo.netlify.app/asstes-notice/Notice1-1profile.jpg"
                     alt="photo 1"
                   />
                   <img
                     class="avatar avatar2"
-                    src="./assets/companies/profile-2.jpg"
+                    src="https://my-daily-bootcamp-rojo.netlify.app/asstes-notice/Notice1-2profile.jpg"
                     alt="photo 2"
                   />
                   <img
                     class="avatar avatar3"
-                    src="./assets/companies/profile-3.jpg"
+                    src="https://my-daily-bootcamp-rojo.netlify.app/asstes-notice/Notice1-3profile.jpg"
                     alt="photo 3"
                   />
                 </div>
@@ -188,17 +198,17 @@ function Main() {
                 <div class="notice-avatars">
                   <img
                     class="avatar avatar1"
-                    src="./assets/companies/profile-4.jpg"
+                    src="https://my-daily-bootcamp-rojo.netlify.app/asstes-notice/Notice2-1profile.jpg"
                     alt="photo 1"
                   />
                   <img
                     class="avatar avatar2"
-                    src="./assets/companies/profile-5.jpg"
+                    src="https://my-daily-bootcamp-rojo.netlify.app/asstes-notice/Notice2-2profile.jpg"
                     alt="photo 2"
                   />
                   <img
                     class="avatar avatar3"
-                    src="./assets/companies/profile-6.jpg"
+                    src="https://my-daily-bootcamp-rojo.netlify.app/asstes-notice/Notice2-3profile.jpg"
                     alt="photo 3"
                   />
                 </div>
@@ -219,12 +229,15 @@ function Main() {
                     target="_blank"
                   >
                     <img
-                      src="assets/instructors/condef5.jpeg"
+                      src="https://my-daily-bootcamp-rojo.netlify.app/img/Ellipse%2031.jpg"
                       alt="foto de perfil de un usuario"
                       class="instructor-profile"
                     />
                     <p>@condef5</p>
-                    <img src="assets/icons/twitter-check.svg" alt="check" />
+                    <img
+                      src="https://my-daily-bootcamp-rojo.netlify.app/img/Vector.jpg"
+                      alt="check"
+                    />
                   </a>
                 </div>
                 <button class="follow-1">
@@ -240,12 +253,15 @@ function Main() {
                     target="_blank"
                   >
                     <img
-                      src="assets/instructors/yummta.jpeg"
+                      src="https://my-daily-bootcamp-rojo.netlify.app/img/Ellipse%2032.jpg"
                       alt="Paul Portillo"
                       class="instructor-profile"
                     />
                     <p>@yummta</p>
-                    <img src="assets/icons/twitter-check.svg" alt="check" />
+                    <img
+                      src="https://my-daily-bootcamp-rojo.netlify.app/img/Vector.jpg"
+                      alt="check"
+                    />
                   </a>
                 </div>
                 <button class="follow-1">
