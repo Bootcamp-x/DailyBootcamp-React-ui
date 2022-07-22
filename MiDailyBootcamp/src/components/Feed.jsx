@@ -33,6 +33,7 @@ let posts = [
   },
 ];
 
+
 function PostItem({ id, author, profile, images, description, date }) {
   return (
     <div class="public">
@@ -56,7 +57,7 @@ function PostItem({ id, author, profile, images, description, date }) {
           >
             <img
               class="date-img"
-              src="${element.profile}"
+              src={profile}
               alt="Foto de perfil del usuario"
             />
           </a>
