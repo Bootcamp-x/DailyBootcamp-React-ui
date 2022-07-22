@@ -1,70 +1,69 @@
+@import url("./css/profile-card.css");
+@import url("./css/cards.css");
+@import url("./css/team.css");
+@import url("./css/followme.css");
+@import url("./css/footer.css");
+@import url("./css/notice-sections.css");
+@import url("./css/reset.css");
+@import url("./css/header.css");
+@import url("./css/styles-new-learning.css");
+@import url("./css/input-file.css");
+@import url("./css/thumbnails.css");
+@import url("./css/stories.css");
+@import url("./css/main-scroll.css");
+@import url("./css/modaldelete.css");
+
+
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  /* colors */
+  --solitude: #f1f2f6;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  background-color: var(--solitude);
+  font-family: "Montserrat";
+}
+
+.main {
+  max-width: 1317px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.main > div {
+  border-radius: 4px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.sidebar-right {
+  max-width: 363px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.sidebar-left {
+  max-width: 274px;
+  position: sticky;
+  height: fit-content;
+  top: 90px;
+}
+
+.sidebar-left,
+.sidebar-right {
+  position: sticky;
+  height: fit-content;
+  top: 90px;
+}
+
+.daily-content {
+  max-width: 622px;
+  margin-left: 29px;
+  margin-right: 29px;
+  margin-bottom: 2em;
 }
