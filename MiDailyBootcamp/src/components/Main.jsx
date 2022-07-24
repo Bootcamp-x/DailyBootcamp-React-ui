@@ -1,5 +1,6 @@
 import Feed from "./feed";
 import SidebarRigth from "./SidebarRigth";
+import SiderBarleft from "./SidebarLeft";
 function TeamItem({ name, image }) {
   return (
     <div class="date-teams1">
@@ -15,7 +16,7 @@ function Main() {
   return (
     <div>
       <main class="main">
-      <SiderBarleft/>
+        <SiderBarleft />
         <div class="daily-content">
           <div class="learning-content">
             <a href="javascript:void(0);" onclick="openModal()">
