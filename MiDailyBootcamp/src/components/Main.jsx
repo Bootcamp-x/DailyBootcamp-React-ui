@@ -1,18 +1,7 @@
 import Feed from "./Feed";
 import SiderBarleft from "./SideBarleft";
-import Feed from "./feed";
 import SidebarRigth from "./SidebarRigth";
 
-function TeamItem({ name, image }) {
-  return (
-    <div class="date-teams1">
-      <a class="link-team" href="#">
-        <img class="team-img" src={image} alt="Alden Cantrell" />
-        <p class="text-teams">{name}</p>
-      </a>
-    </div>
-  );
-}
 
 function Main() {
   return (
