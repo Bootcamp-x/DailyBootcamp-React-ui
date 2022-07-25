@@ -2,7 +2,6 @@ import Feed from "./Feed";
 import SiderBarleft from "./SideBarleft";
 import SidebarRigth from "./SidebarRigth";
 
-
 function Main() {
   return (
     <div>

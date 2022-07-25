@@ -1,3 +1,5 @@
+import { Button } from "@chakra-ui/react";
+
 function ItemStories({ name, profileImage, bg }) {
   return (
     <a class="link-stories" href="#">
@@ -66,9 +68,7 @@ function ItemSection({
       >
         <h3 class="notice-tittle">{title}</h3>
         <p class="notice-text">{parraf}</p>
-        <a class="notice-button" href={redsocial} target="_blank">
-          Explore All
-        </a>
+        <Button>Explore All</Button>
       </article>
 
       <footer class="notice-footer">

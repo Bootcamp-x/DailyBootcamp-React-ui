@@ -1,19 +1,16 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
-import Document from "./components/Document";
+import { ChakraProvider } from "@chakra-ui/react";
 import "./index.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div>
-      <Navbar />
-      <Main />
-
-
-    </div>
+    <ChakraProvider>
+      <div>
+        <Navbar />
+        <Main />
+      </div>
+    </ChakraProvider>
   );
 }
 
