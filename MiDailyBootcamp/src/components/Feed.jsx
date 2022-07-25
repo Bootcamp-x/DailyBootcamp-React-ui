@@ -1,8 +1,18 @@
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import {
+  Button,
+  Portal,
+  MenuButton,
+  MenuItem,
+  Menu,
+  MenuList,
+} from "@chakra-ui/react";
+
 let posts = [
   {
     id: 1,
     author: "Paul Portillo",
-    profile: "./assets/profile.jpg",
+    profile: "https://my-daily-bootcamp-rojo.netlify.app/img/perfil.jpg",
     date: "04 de Julio, 2022",
     description: "aprendi a insertar imagen y icono",
     images: [],
@@ -10,7 +20,7 @@ let posts = [
   {
     id: 2,
     author: "Ronaldo Delgado",
-    profile: "./assets/companies/profile-2.jpg",
+    profile: "https://my-daily-bootcamp-rojo.netlify.app/img/perfil.jpg",
     date: "04 de Julio, 2022",
     description: "Aprendimos la jerarquia de clases",
     images: [],
@@ -18,7 +28,7 @@ let posts = [
   {
     id: 3,
     author: "Sandrito Hubel",
-    profile: "./assets/companies/profile-1.jpg",
+    profile: "https://my-daily-bootcamp-rojo.netlify.app/img/perfil.jpg",
     date: "04 de Julio, 2022",
     description: "Hoy jugamos lobo",
     images: [],
@@ -26,44 +36,58 @@ let posts = [
   {
     id: 4,
     author: "Cucarachita dominguez",
-    profile: "./assets/companies/profile-5.jpg",
+    profile: "https://my-daily-bootcamp-rojo.netlify.app/img/perfil.jpg",
     date: "04 de Julio, 2022",
     description: "Hoy aprendí a usar la target",
     images: [],
   },
 ];
 
-
 function PostItem({ id, author, profile, images, description, date }) {
   return (
-    <div class="public">
-      <div class="pop-container">
-        <button class="public-button">
-          <img src="assets/icons/dots.svg" alt="Menú de Opciones" />
-        </button>
-        <div class="POP">
-          <button class="popUp">
-            <img src="./assets/basura.svg" />
-            <p>Delete</p>
-          </button>
+    <div className="public">
+      <div className="pop-container">
+        <Button className="public-button">
+          <Menu>
+            {({ isOpen }) => (
+              <>
+                <MenuButton
+                  isActive={isOpen}
+                  as={Button}
+                  rightIcon={<ChevronDownIcon />}
+                >
+                  {isOpen ? "Close" : "Open"}
+                </MenuButton>
+                <MenuList>
+                  <MenuItem>Download</MenuItem>
+                  <MenuItem onClick={() => alert("Kagebunshin")}>
+                    Create a Copy
+                  </MenuItem>
+                </MenuList>
+              </>
+            )}
+          </Menu>
+        </Button>
+        <div className="POP">
+          <img src="http://127.0.0.1:5500/assets/basura.svg" />
         </div>
       </div>
-      <div class="public-date">
-        <div class="date-conte">
+      <div className="public-date">
+        <div className="date-conte">
           <a
-            class="link-public"
+            className="link-public"
             href="https://twitter.com/yummta?lang=es"
             target="_blank"
           >
             <img
-              class="date-img"
+              className="date-img"
               src={profile}
               alt="Foto de perfil del usuario"
             />
           </a>
-          <div class="date-text">
+          <div className="date-text">
             <a
-              class="link-public"
+              className="link-public"
               href="https://twitter.com/yummta?lang=es"
               target="_blank"
             >
@@ -73,8 +97,8 @@ function PostItem({ id, author, profile, images, description, date }) {
           </div>
         </div>
       </div>
-      <div class="text">
-        <p>${description}</p>
+      <div className="text">
+        <p>{description}</p>
       </div>
     </div>
   );
@@ -89,6 +113,5 @@ function Feed() {
     </div>
   );
 }
-
 
 export default Feed;

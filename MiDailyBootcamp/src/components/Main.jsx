@@ -1,14 +1,11 @@
-import Feed from "./feed";
+import Feed from "./Feed";
 import SiderBarleft from "./SideBarleft";
-
-
-
 
 function Main() {
   return (
     <div>
       <main class="main">
-      <SiderBarleft/>
+        <SiderBarleft />
         <div class="daily-content">
           <div class="learning-content">
             <a href="javascript:void(0);" onclick="openModal()">
@@ -81,7 +78,8 @@ function Main() {
               </a>
               <a class="link-stories" href="#">
                 <li class="frame-storie">
-                  <div class="img-storie3 img-storie">f
+                  <div class="img-storie3 img-storie">
+                    f
                     <img
                       class="profile-photo"
                       src="./assets/stories/profile 3.jpg"
